@@ -42,8 +42,8 @@ app.put('/image', (req,res) => {image.handleImage(req,res,db)})
 
 app.post('/imageurl', (req,res) => {image.handleApiCall(req,res)})
 
-app.listen(3000, ()=>{ //второй параметр (функция) - необязателен
-	console.log('server is running on port 3000');
+app.listen(process.env.PORT || 3000, ()=>{ //второй параметр (функция) - необязателен
+	console.log(`server is running on port ${process.env.PORT}`);
 })
-console.log(process.env);
+// console.log(process.env);
 // сделали регистрацию нового пользователя и вход уже существующего, пока все понятно!)) продолжай в том же духе! А лучше даже поднажми!!))
